@@ -14,7 +14,16 @@ public class PlayerController implements KeyListener {
 		// TODO Auto-generated method stub
 		switch (e.getKeyChar()) {
 		case 'w':
-			GameController.player.aceleration = 0;
+			GameController.player.acelerationY = 0;
+		break;
+		case 's':
+			GameController.player.acelerationY = 0;
+			break;
+		case 'a':
+			GameController.player.acelerationX = 0;
+			break;
+		case 'd':
+			GameController.player.acelerationX = 0;
 			break;
 
 		default:
@@ -27,7 +36,16 @@ public class PlayerController implements KeyListener {
 		// TODO Auto-generated method stub
 		switch (e.getKeyChar()) {
 		case 'w':
-				GameController.player.aceleration = 5;
+				GameController.player.acelerationY = -2;
+			break;
+		case 's':
+			GameController.player.acelerationY = -2;
+			break;
+		case 'a':
+			GameController.player.acelerationX = -2;
+			break;
+		case 'd':
+			GameController.player.acelerationX = -2;
 			break;
 
 		default:

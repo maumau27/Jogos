@@ -53,7 +53,8 @@ public class GameController {
 	
 	public static void gameUpdates(double delta)
 	{
-		System.err.println(delta);
+		player.position.x += player.acelerationX;
+		player.position.y += player.acelerationY;
 	}
 	
 	public static void render()

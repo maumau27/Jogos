@@ -9,7 +9,8 @@ import javax.swing.JPanel;
 public class Player extends JPanel{
 	
 	public Point position = new Point(100, 100);
-	public float aceleration = 0;
+	public float acelerationY = 0;
+	public float acelerationX = 0;
 	
 	public Player()
 	{
