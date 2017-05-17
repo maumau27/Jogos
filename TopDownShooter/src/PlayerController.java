@@ -39,13 +39,13 @@ public class PlayerController implements KeyListener {
 				GameController.player.acelerationY = -2;
 			break;
 		case 's':
-			GameController.player.acelerationY = -2;
+			GameController.player.acelerationY = 2;
 			break;
 		case 'a':
 			GameController.player.acelerationX = -2;
 			break;
 		case 'd':
-			GameController.player.acelerationX = -2;
+			GameController.player.acelerationX = 2;
 			break;
 
 		default:
