@@ -24,7 +24,7 @@ public class BoardManager: MonoBehaviour {
     public Count houseCount = new Count(2, 4);
     public GameObject[] floorTiles;
     public GameObject[] wallTiles;
-    public GameObject[] Houses;
+    public GameObject[] houses;
 
     private Transform boardHolder;
     private List<Vector3> gridPositions = new List<Vector3>();
@@ -46,13 +46,15 @@ public class BoardManager: MonoBehaviour {
     {
         boardHolder = new GameObject("Board").transform;
 
-        for(int x = -1; x < columns + 1; x++)
+        for(int x = -1; x <= columns; x++)
         {
-            for(int y = -1; y < rows + 1; y++)
+            for(int y = -1; y <= rows; y++)
             {
-                GameObject toInstantiate = floorTiles[Random.Range(0, floorTiles.Length)];
+                GameObject toInstantiate;
                 if (x == -1 || x == columns || y == -1 || y == rows)
                     toInstantiate = wallTiles[Random.Range(0, wallTiles.Length)];
+                else
+                    toInstantiate = floorTiles[Random.Range(0, floorTiles.Length)];
 
                 GameObject instance = Instantiate(toInstantiate, new Vector3(x, y, 0f), Quaternion.identity) as GameObject;
 
@@ -86,7 +88,7 @@ public class BoardManager: MonoBehaviour {
     {
         BoardSetup();
         InitialliseList();
-        LayoutObjectAtRandom(Houses, houseCount.minimum, houseCount.maximum);
+        LayoutObjectAtRandom(houses, houseCount.minimum, houseCount.maximum);
     }
 
 	// Use this for initialization

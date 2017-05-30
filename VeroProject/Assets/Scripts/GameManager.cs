@@ -8,7 +8,8 @@ public class GameManager : MonoBehaviour {
     public BoardManager boardScript;
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
+
         if (instance == null)
             instance = this;
         else if (instance != null)
