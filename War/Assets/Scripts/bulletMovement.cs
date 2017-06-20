@@ -41,6 +41,6 @@ public class bulletMovement : MonoBehaviour {
 
     void moveVelocity()
     {
-        GetComponent<Rigidbody>().AddForce(transform.up * speed);
+        GetComponent<Rigidbody>().AddForce(transform.forward * speed);
     }
 }
